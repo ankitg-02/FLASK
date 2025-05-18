@@ -1,7 +1,6 @@
 from flask import Flask, render_template, request
-
 app= Flask(__name__)
-@app.route('/index')
+@app.route('/')
 def index():
     return render_template('index.html')
 @app.route('/about')
@@ -13,6 +12,5 @@ def contact():
 @app.route('/help')
 def services():
     return render_template('help.html')
-
 if __name__ == '__main__':
     app.run(debug=True)
