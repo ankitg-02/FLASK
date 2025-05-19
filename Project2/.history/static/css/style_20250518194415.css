@@ -1,3 +1,4 @@
+/* Reset and Base */
 * {
     margin: 0;
     padding: 0;
@@ -5,20 +6,24 @@
 }
 
 body {
-    font-family: 'Segoe UI', sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f4f4f4;
     color: #333;
+    line-height: 1.6;
     padding: 20px;
 }
 
+/* Header */
 header {
-    background-color: #0056b3;
+    background-color: #007BFF;
     color: white;
     padding: 20px;
-    text-align: center;
     border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
+/* Navigation */
 nav {
     margin-top: 10px;
 }
@@ -28,30 +33,36 @@ nav a {
     text-decoration: none;
     margin: 0 15px;
     font-weight: bold;
+    transition: color 0.3s ease;
 }
 
 nav a:hover {
     color: #ffdd57;
 }
 
+/* Main Content */
 main {
-    background-color: white;
-    padding: 25px;
-    margin-top: 20px;
+    background: white;
+    padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Footer */
 footer {
-    margin-top: 40px;
     text-align: center;
-    color: #666;
-    font-size: 14px;
+    margin-top: 40px;
+    color: #777;
 }
 
+/* Responsive */
 @media (max-width: 600px) {
     nav a {
         display: block;
         margin: 10px 0;
+    }
+
+    header, main {
+        padding: 15px;
     }
 }

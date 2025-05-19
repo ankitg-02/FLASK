@@ -1,0 +1,19 @@
+{% extends 'base.html' %} {% block title %}Add Blog - My Blog{% endblock %} {%
+block content %}
+<h2>Submit Your Blog</h2>
+<form method="POST" action="/add_blog">
+  <label>Name:</label><br />
+  <input type="text" name="name" required /><br /><br />
+
+  <label>Email:</label><br />
+  <input type="email" name="email" required /><br /><br />
+
+  <label>Phone:</label><br />
+  <input type="text" name="phone" required /><br /><br />
+
+  <label>Blog Content:</label><br />
+  <textarea name="content" rows="5" cols="40" required></textarea><br /><br />
+
+  <button type="submit">Submit</button>
+</form>
+{% endblock %}
