@@ -1,0 +1,44 @@
+main {
+  max-width: 900px;        /* limit content width */
+  margin: 40px auto;       /* center horizontally with some vertical spacing */
+  padding: 20px;
+  text-align: center;      /* center all text inside main */
+  background-color: #fff;  /* optional: white background for contrast */
+  border-radius: 10px;     /* optional: rounded corners */
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);  /* subtle shadow */
+}
+
+.nav-container {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;  /* stack logo and menu vertically */
+  align-items: center;     /* center horizontally */
+  gap: 10px;
+}
+
+/* Center the logo */
+.nav-logo {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+  width: 100%;
+}
+
+/* Center the menu items in a row or column */
+.nav-menu {
+  list-style: none;
+  display: flex;
+  justify-content: center;  /* center horizontally */
+  gap: 15px;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  flex-wrap: wrap; /* wrap to next line if needed */
+}
+
+.nav-menu li {
+  text-align: center; /* center text inside each menu item */
+}

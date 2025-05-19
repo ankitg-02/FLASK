@@ -1,0 +1,51 @@
+{% extends 'base.html' %} {% block title %}Add Blog{% endblock %} {% block
+content %}
+<main class="form-container">
+  <h2>Add a New Blog</h2>
+  <form method="POST" action="{{ url_for('add_blog') }}">
+    <input type="text" name="name" placeholder="Your Name" required />
+    <input type="email" name="email" placeholder="Your Email" required />
+    <input type="tel" name="phone" placeholder="Your Phone Number" required />
+    <input type="text" name="title" placeholder="Blog Title" required />
+    <textarea
+      name="content"
+      placeholder="Your Blog Content..."
+      required
+    ></textarea>
+    <button type="submit">Submit Blog</button>
+  </form>
+</main>
+
+<script>
+  document.querySelector("form").addEventListener("submit", function (e) {
+    const name = document.querySelector("input[name='name']").value.trim();
+    const email = document.querySelector("input[name='email']").value.trim();
+    const phone = document.querySelector("input[name='phone']").value.trim();
+    const title = document.querySelector("input[name='title']").value.trim();
+    const content = document
+      .querySelector("textarea[name='content']")
+      .value.trim();
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const phoneRegex = /^[0-9]{10}$/;
+
+    if (!name || !email || !phone || !title || !content) {
+      alert("All fields are required!");
+      e.preventDefault();
+      return;
+    }
+
+    if (!emailRegex.test(email)) {
+      alert("Please enter a valid email address.");
+      e.preventDefault();
+      return;
+    }
+
+    if (!phoneRegex.test(phone)) {
+      alert("Please enter a valid 10-digit phone number.");
+      e.preventDefault();
+      return;
+    }
+  });
+</script>
+{% endblock %}

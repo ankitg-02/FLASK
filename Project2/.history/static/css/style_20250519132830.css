@@ -1,0 +1,164 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  max-width: 900px;        /* limit content width */
+  margin: 40px auto;       /* center horizontally with some vertical spacing */
+  padding: 20px;
+  text-align: center;      /* center all text inside main */
+  background-color: #fff;  /* optional: white background for contrast */
+  border-radius: 10px;     /* optional: rounded corners */
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);  /* subtle shadow */
+}
+
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+}
+
+/* Navbar container */
+.navbar {
+  background-color: #004080;
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo */
+.nav-logo {
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Menu */
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+.nav-menu li {
+  /* no extra style */
+}
+
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-link:hover {
+  background-color: #002f5f;
+}
+
+/* Special button style for Add Blog */
+.nav-link-button {
+  background-color: #0080ff;
+  padding: 8px 16px;
+  border-radius: 25px;
+}
+
+.nav-link-button:hover {
+  background-color: #005bb5;
+}
+
+/* Hamburger menu toggle button - hidden on desktop */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  border-radius: 3px;
+  transition: 0.3s;
+}
+
+/* Hamburger active animation */
+.nav-toggle_active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.nav-toggle_active span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-toggle_active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Responsive - mobile styles */
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: flex;
+  }
+
+  .nav-menu {
+    position: absolute;
+    top: 58px;
+    right: 0;
+    background-color: #004080;
+    flex-direction: column;
+    width: 200px;
+    padding: 15px 0;
+    border-radius: 0 0 0 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(100%);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  .nav-menu.nav-menu_visible {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateX(0);
+  }
+
+  .nav-menu li {
+    margin: 10px 0;
+    text-align: center;
+  }
+}
+/* Footer styling */
+footer {
+  background-color: #004080;
+  color: #ffffff;
+  text-align: center;
+  padding: 15px 20px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font-size: 14px;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.15);
+  z-index: 999;
+}
+
+.footer p {
+  margin: 0;
+}

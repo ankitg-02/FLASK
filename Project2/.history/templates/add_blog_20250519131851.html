@@ -1,0 +1,33 @@
+{% extends 'base.html' %} {% block title %}Add Blog - My Blog{% endblock %} {%
+block content %}
+<div class="form-container">
+  <h2>Submit Your Blog</h2>
+  <form
+    method="POST"
+    action="/add_blog"
+    class="blog-form"
+    onsubmit="return validateForm()"
+  >
+    <label>Name:</label>
+    <input type="text" name="name" required />
+
+    <label>Email:</label>
+    <input type="email" name="email" required />
+
+    <label>Phone:</label>
+    <input type="tel" name="phone" pattern="[0-9]{10}" required />
+
+    <label>Blog Content:</label>
+    <textarea name="content" rows="5" required></textarea>
+
+    <button type="submit">Submit Blog</button>
+  </form>
+</div>
+
+<script>
+  function validateForm() {
+    alert("Thank you! Your blog has been submitted.");
+    return true;
+  }
+</script>
+{% endblock %}
