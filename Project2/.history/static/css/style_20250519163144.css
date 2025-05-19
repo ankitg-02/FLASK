@@ -169,16 +169,3 @@ main {
   color: #00bfff;
   text-decoration: none;
 }
-.card-mb-3 {
-  max-width: 800px;
-  margin: 40px auto; /* centers horizontally */
-  padding: 20px;
-  text-align: center;
-}
-
-.card-mb-3 h1,
-.card-mb-3 h2,
-.card-mb-3 p {
-  margin-bottom: 15px;
-  color: #333;
-}

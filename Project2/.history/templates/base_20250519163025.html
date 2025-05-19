@@ -22,23 +22,12 @@
             </li>
             <li><a href="{{ url_for('help') }}" class="nav-link">Help</a></li>
             <li>
-              <a href="{{ url_for('add_blog') }}" class="nav-link">Add Blog</a>
-            </li>
-
-            {% if current_user.is_authenticated %}
-            <li>
-              <a href="{{ url_for('logout') }}" class="nav-link nav-link-button"
-                >Logout</a
+              <a
+                href="{{ url_for('add_blog') }}"
+                class="nav-link nav-link-button"
+                >Add Blog</a
               >
             </li>
-            {% else %}
-            <li><a href="{{ url_for('login') }}" class="nav-link">Login</a></li>
-            <li>
-              <a href="{{ url_for('signup') }}" class="nav-link nav-link-button"
-                >Sign Up</a
-              >
-            </li>
-            {% endif %}
           </ul>
           <div class="nav-toggle" id="nav-toggle">
             <span></span>
